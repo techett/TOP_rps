@@ -51,9 +51,26 @@ function PlayerSelect() {
 
 // Call victor
 function GameTime(PlayerChoice, ComputerChoice) {
+    // A dictionary that maps each choice to the choices it can defeat
+    const winningMap = {
+        'scissors': ['paper', 'lizard'],
+        'rock': ['scissors', 'lizard'],
+        'paper': ['rock', 'spock'],
+        'lizard': ['spock', 'paper'],
+        'spock': ['scissors', 'rock']
+    };
 
+    // Check for a tie
+    if (PlayerChoice === ComputerChoice) {
+        return "It's a tie!";
+    }
 
+    // Check if player's choice is in the winning map for that choice
+    if (winningMap[PlayerChoice].includes(ComputerChoice)) {
+        return "Player wins!";
+    }
 
+    return "Computer wins!";
 }
 
 // Starting off we need to go over the rules.
@@ -88,4 +105,4 @@ console.log(`Please make a choice from the following:
 // Outputs
 //console.log(PickWeapon()); // Working as expected.
 
-console.log(PlayerSelect());
+//console.log(PlayerSelect());
