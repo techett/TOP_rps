@@ -6,11 +6,11 @@ Making a rock paper scissor game.
 */
 
 // Variables
-const choices = ["scissors", "rock", "paper"];
+const choices = ["scissors", "rock", "paper", "lizard", "spock"];
 
 // Computer decision
 function PickWeapon() {
-    let RandomNumber = Math.random() * 3;
+    let RandomNumber = Math.random() * 5;
 
     /* 
     Taking the random number to convert to a whole
@@ -31,15 +31,44 @@ function PickWeapon() {
 
 // Player decision
 function PlayerSelect() {
-    console.log(`Please make a choice from the following`);
+
+}
+
+// Call victor
+function GameTime(PlayerChoice, ComputerChoice) {
+
 }
 
 // Starting off we need to go over the rules.
 console.log(
-    `Rock beats scissors, scissors beat paper,
-    and paper beats rock\nYour opponent is 
-    the computer and it has already chose its answer.`
+    `Rules for Winning Combos:
+
+    Scissors cuts paper.
+    Paper covers rock.
+    Rock crushes lizard.
+    Lizard poisons Spock.
+    Spock smashes scissors.
+    Scissors decapitates lizard.
+    Lizard eats paper.
+    Paper disproves Spock.
+    Spock vaporizes rock.
+    Rock crushes scissors.
+    
+    Your opponent is 
+    the computer and it has already chose its answer.
+    `
+);
+
+// Present player their options.
+console.log(`Please make a choice from the following:
+    1. Rock
+    2. Paper
+    3. Scissors
+    4. Lizard
+    5. Spock`
 );
 
 // Outputs
-console.log(PickWeapon()); // Working as expected.
+//console.log(PickWeapon()); // Working as expected.
+
+console.log(PlayerSelect());
