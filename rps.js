@@ -52,7 +52,7 @@ function PlayerSelect() {
 // Call victor
 function GameTime(PlayerChoice, ComputerChoice) {
     // A dictionary that maps each choice to the choices it can defeat
-    const winningMap = {
+    const WinningMap = {
         'scissors': ['paper', 'lizard'],
         'rock': ['scissors', 'lizard'],
         'paper': ['rock', 'spock'],
@@ -66,7 +66,7 @@ function GameTime(PlayerChoice, ComputerChoice) {
     }
 
     // Check if player's choice is in the winning map for that choice
-    if (winningMap[PlayerChoice].includes(ComputerChoice)) {
+    if (WinningMap[PlayerChoice].includes(ComputerChoice)) {
         return "Player wins!";
     }
 
