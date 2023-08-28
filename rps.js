@@ -31,11 +31,28 @@ function PickWeapon() {
 
 // Player decision
 function PlayerSelect() {
+    let choice = prompt(`
+        - rock
+        - paper
+        - scissors
+        - lizard
+        - spock
 
+        Please make your decision`
+    ).toLowerCase();
+
+    if (choices.includes(choice)) {
+        return choice;
+    } else {
+        console.log(`Invalid choice. Please, try again.`)
+        return PlayerSelect();
+    }
 }
 
 // Call victor
 function GameTime(PlayerChoice, ComputerChoice) {
+
+
 
 }
 
